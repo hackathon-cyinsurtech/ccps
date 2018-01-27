@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1028385853232",
+    "firebase_url": "https://ccps-544d4.firebaseio.com",
+    "project_id": "ccps-544d4",
+    "storage_bucket": "ccps-544d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1028385853232:android:3d3c1f63e3a39f47",
+        "android_client_info": {
+          "package_name": "com.insuretech.ccps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1028385853232-10c0blppbhl3vmorua25ic7rihmc6nln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB00KwbEdrnFvARaAjPEbKo3BTQdj5nN0I"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,61 @@
+{% extends "admin/base_site.html" %}
+
+{% load i18n admin_static admin_modify admin_urls bootstrap3 %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+<style>
+    .warnings {
+        color: #8a6d3b;
+    }
+
+    .success {
+        color: #3c763d;
+    }
+</style>
+{% endblock %}
+
+{% if not is_popup %}
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+    <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a> &rsaquo;
+    Notifications
+</div>
+{% endblock %}
+{% endif %}
+
+{% block content %}
+<div id="content-main" class="inner-two-columns notifications">
+    <form method="POST" action="." enctype="multipart/form-data" class="form">
+        <ol class="errorlist">
+            {% for error in form.non_field_errors %}
+            <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ol>
+        <ul class="errorlist">
+            {% for error in errors %}
+            <li><strong>{{ error|escape }}</strong></li>
+            {% endfor %}
+        </ul>
+        <ul class="warnings">
+            {% for warning in warnings %}
+            <li><strong>{{ warning|escape }}</strong></li>
+            {% endfor %}
+        </ul>
+        {% if success %}
+        <p><strong class="success">{{ success|safe }}</strong></p>
+        {% endif %}
+
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% buttons %}
+        <a href="{% url 'admin:index' %}" class="text-error">Back</a>&nbsp;
+        <button type="submit" class="btn btn-primary">
+            Submit
+        </button>
+        {% endbuttons %}
+
+
+    </form>
+</div>
+{% endblock %}

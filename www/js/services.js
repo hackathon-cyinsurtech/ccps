@@ -2,6 +2,16 @@ SERVER_URL = 'http://192.168.99.100:8000';
 
 angular.module('starter.services', [])
 
+.factory('PushToken', function($http) {
+  return {
+    save: function(token) {
+      return $http.post(SERVER_URL + '/pushtoken', {
+        'username': 'concon',
+        'token': token.token
+      });
+    }
+  }
+})
 .factory('Suggestions', function() {
   var data = [{
     id: 1,

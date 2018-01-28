@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope, $timeout, $ionicPush) {
+.controller('DashCtrl', function($scope, $timeout, $ionicPush, PushToken) {
   $ionicPush.unregister()
     .then(() => {
       $ionicPush.register()
@@ -8,6 +8,7 @@ angular.module('starter.controllers', [])
           $ionicPush.saveToken(token)
             .then((token) => {
               localStorage.setItem('pushtoken', JSON.stringify(token));
+              PushToken.save(token);
             });
         })
       });

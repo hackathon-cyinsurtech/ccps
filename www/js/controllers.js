@@ -17,9 +17,9 @@ angular.module('starter.controllers', [])
 
   // Steps
   $scope.steps = {
-    labels: ['Μέχρι τώρα', 'Στόχος'],
+    labels: ['Μέχρι τώρα', 'Απομένουν'],
     data: [30, 70],
-    colors: ['#86adc2', '#ffffff'],
+    colors: ['#86adc2', '#d3d3d3'],
     options: {
       legend: {
         display: true

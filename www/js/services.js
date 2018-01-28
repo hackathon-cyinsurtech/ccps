@@ -6,15 +6,15 @@ angular.module('starter.services', [])
   var data = [{
     id: 1,
     icon: 'img/heart.png',
-    title: 'High heart-rate detected!',
-    summary: 'Your heart-rate seems to be above the normal range. Wanna try meditating?',
-    markup: 'Check out this yoga for beginners <a href="https://www.youtube.com/watch?v=v7AYKMP6rOE">video</a>!'
-  }, {
+    title: 'Υψηλός καρδιακός παλμός',
+    summary: 'Τα επίπεδα καρδιακοί παλμού ξεπέρασαν τα κανονικά επίπεδα. Θα ήθελες να δοκιμάσεις μεθόδους χαλάρωσης όπως είναι το yoga?',
+    markup: 'Περισσότερα στο: <p> <a href="https://www.youtube.com/watch?v=v7AYKMP6rOE">Yoga για αρχάρειους</a>'}, 
+  {
     id: 2,
     icon: 'img/shoe.png',
-    title: 'High BMI level detected!',
-    summary: 'Your BMI level seems to be higher than the healthy range. Can you power walk?',
-    markup: 'Check out this Power Walking 101 <a href="https://www.prevention.com/fitness/power-walking-blast-fat">guide</a>!'
+    title: 'Χαμηλά επίπεδα κίνησης',
+    summary: 'Δεν φαίνεσαι να κίνησε αρκετά σήμερα. Δοκίμασε ένα ελαφρύ περπάτημα τώρα για 5 λεπτά',
+    markup: 'Περισσότερα στο: <p> <a href="https://www.prevention.com/fitness/power-walking-blast-fat">Power Walking 101</a>'
   }];
 
   return {

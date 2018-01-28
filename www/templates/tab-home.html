@@ -1,0 +1,31 @@
+<ion-view view-title="Κεντρική">
+  <ion-content class="padding">
+      <div class="card">
+          <div class="item item-divider">
+              Βήματα σήμερα
+          </div>
+          <div class="item item-text-wrap">
+              <canvas id="steps" class="chart chart-doughnut" chart-data="steps.data" width="350"
+              chart-labels="steps.labels" chart-colors="steps.colors" chart-options="steps.options"></canvas>
+          </div>       
+        </div>
+        <div class="card">
+            <div class="item item-divider">
+                Καρδιακός παλμός/7 μέρες
+            </div>
+            <div class="item item-text-wrap">
+                <canvas id="heart-rate" class="chart chart-line" chart-data="hr.data" width="350"
+                chart-labels="hr.labels" chart-series="hr.series" chart-options="hr.options"></canvas>
+            </div>       
+          </div>      
+          <div class="card">
+              <div class="item item-divider">
+                  Δείκτης μάζας σώματος/6 μήνες
+              </div>
+              <div class="item item-text-wrap">
+                  <canvas id="bmi" class="chart-horizontal-bar" chart-data="bmi.data" width="350"
+                  chart-labels="bmi.labels" chart-colors="bmi.colors" chart-series="bmi.series" chart-options="bmi.options"></canvas>
+              </div>       
+          </div>       
+  </ion-content>
+</ion-view>

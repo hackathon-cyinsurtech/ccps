@@ -17,9 +17,9 @@ angular.module('starter.controllers', [])
 
   // Steps
   $scope.steps = {
-    labels: ['Current', 'Remaining'],
+    labels: ['Μέχρι τώρα', 'Στόχος'],
     data: [30, 70],
-    colors: ['#86adc2', '#d4d4d4'],
+    colors: ['#86adc2', '#ffffff'],
     options: {
       legend: {
         display: true
@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
 
   // Heart-rate
   $scope.hr = {
-    labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    labels: ['Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο', 'Κυριακή'],
     data: [
       [110, 115, 120, 95, 130, 122, 118],
       [100, 100, 100, 100, 100, 100, 100],
@@ -43,7 +43,7 @@ angular.module('starter.controllers', [])
 
   // BMI
   $scope.bmi = {
-    labels: ['August', 'September', 'October', 'November', 'December', 'January'],
+    labels: ['Αύγουστος', 'Σεπτέμβρης', 'Οκτώβρης', 'Νοέμβρης', 'Δεκέμβρης', 'Γενάρης'],
     series: ['Actual'],
     data: [30, 29, 27, 27, 25, 24],
     colors: ['#f12d3a', '#faa54a', '#faa54a', '#faa54a', '#faa54a', '#3bb4af'],

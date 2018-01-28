@@ -5,7 +5,10 @@ angular.module('starter.controllers', [])
     .then(() => {
       $ionicPush.register()
         .then((token) => {
-          $ionicPush.saveToken(token);
+          $ionicPush.saveToken(token)
+            .then((token) => {
+              localStorage.setItem('pushtoken', JSON.stringify(token));
+            });
         })
       });
 
@@ -81,5 +84,5 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AccountCtrl', function($scope) {
-  
+  $scope.pushtoken = JSON.parse(localStorage.getItem('pushtoken'));
 });

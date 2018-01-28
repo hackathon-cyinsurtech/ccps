@@ -39,11 +39,11 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.home', {
+    url: '/home',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
+      'tab-home': {
+        templateUrl: 'templates/tab-home.html',
         controller: 'DashCtrl'
       }
     }
@@ -79,7 +79,7 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/home');
 
   // Configure all charts
   ChartJsProvider.setOptions({

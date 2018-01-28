@@ -2,6 +2,38 @@ SERVER_URL = 'http://192.168.99.100:8000';
 
 angular.module('starter.services', [])
 
+.factory('Suggestions', function() {
+  var data = [{
+    id: 1,
+    icon: 'img/heart.png',
+    title: 'High heart-rate detected!',
+    summary: 'Your heart-rate seems to be above the normal range. Wanna try meditating?',
+    markup: 'Check out this yoga for beginners <a href="https://www.youtube.com/watch?v=v7AYKMP6rOE">video</a>!'
+  }, {
+    id: 2,
+    icon: 'img/shoe.png',
+    title: 'High BMI level detected!',
+    summary: 'Your BMI level seems to be higher than the healthy range. Can you power walk?',
+    markup: 'Check out this Power Walking 101 <a href="https://www.prevention.com/fitness/power-walking-blast-fat">guide</a>!'
+  }];
+
+  return {
+    all: function() {
+      return data;
+    },
+    remove: function(suggestion) {
+      data.splice(data.indexOf(suggestion), 1);
+    },
+    get: function(id) {
+      for (var i = 0; i < data.length; i++) {
+        if (data[i].id === parseInt(id)) {
+          return data[i];
+        }
+      }
+      return null;
+    }
+  };
+})
 .factory('Chats', function() {
   // Might use a resource here that returns a JSON array
 

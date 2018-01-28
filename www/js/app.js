@@ -50,7 +50,7 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
   })
 
   .state('tab.chats', {
-      url: '/chats',
+      url: '/suggestions',
       views: {
         'tab-chats': {
           templateUrl: 'templates/tab-chats.html',
@@ -59,7 +59,7 @@ angular.module('starter', ['ionic', 'ionic.cloud', 'starter.controllers', 'start
       }
     })
     .state('tab.chat-detail', {
-      url: '/chats/:chatId',
+      url: '/suggestions/:id',
       views: {
         'tab-chats': {
           templateUrl: 'templates/chat-detail.html',
